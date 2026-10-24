@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#a7b9c3">
+  <meta name="description" content="Homemade fudge, chocolates, seasonal candies, and small-town sweetness from Mount Moosilauke Candies in Woodsville, New Hampshire.">
+  <title>Mount Moosilauke Candies | Homemade in Woodsville, NH</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght,SOFT,WONK@9..144,600..900,0..100,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"><script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="hero-wrap" id="home">
+    <section class="hero" aria-labelledby="hero-title">
+      <nav class="topbar" aria-label="Primary navigation">
+        <a class="brand" href="#home" aria-label="Mount Moosilauke Candies home"><img src="assets/logo.png" alt=""></a>
+        <div class="dock" id="navLinks">
+          <a href="#shop" aria-label="Shop"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="6.5" height="6.5" rx="1.5"/><rect x="14" y="3.5" width="6.5" height="6.5" rx="1.5"/><rect x="3.5" y="14" width="6.5" height="6.5" rx="1.5"/><rect x="14" y="14" width="6.5" height="6.5" rx="1.5"/></svg></a>
+          <a href="#story" aria-label="Our story"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 1.15 4.1a6.7 6.7 0 0 0 4.75 4.75L22 12l-4.1 1.15a6.7 6.7 0 0 0-4.75 4.75L12 22l-1.15-4.1a6.7 6.7 0 0 0-4.75-4.75L2 12l4.1-1.15a6.7 6.7 0 0 0 4.75-4.75L12 2Z"/></svg></a>
+          <a href="#visit" aria-label="Visit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-5.35 10.2-7.25 11.85a1.15 1.15 0 0 1-1.5 0C9.35 20.2 4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></a>
+          <button data-open-search aria-label="Search candies"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.3"/><path d="m15.5 15.5 4 4"/></svg></button>
+          <button data-open-cart aria-label="Open demo bag"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 8.5h13l-1 11h-11l-1-11Z"/><path d="M9 9V6.5a3 3 0 0 1 6 0V9"/></svg><b data-cart-count>0</b></button>
+        </div>
+        <a class="pin" href="#visit" aria-label="Visit the shop"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-12A7 7 0 0 0 5 9c0 5.8 7 12 7 12Zm0-9.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/></svg></a>
+      </nav>
+
+      <div class="stage">
+        <div class="snowfall" id="snowfall" aria-hidden="true"></div>
+        <img class="winter-forest" src="assets/winter-forest-v8.png" alt="" aria-hidden="true">
+        <button class="selector s1" data-slide="4" aria-label="Show holiday chocolate wreath"><img src="assets/wreath-v2.png" alt=""></button>
+        <button class="selector s2" data-slide="5" aria-label="Show chocolate assortment"><img src="assets/assortment-box-v2.png" alt=""></button>
+        <button class="selector s3" data-slide="1" aria-label="Show chocolate strawberries"><img src="assets/strawberries-v2.png" alt=""></button>
+        <button class="selector s4" data-slide="2" aria-label="Show chocolate moose pops"><img src="assets/moose-pops-v2.png" alt=""></button>
+        <img class="mountain" src="assets/moosilauke-sugar-profile-v10.png" alt="A confectioner’s-sugar miniature shaped like Mount Moosilauke’s broad rounded summit ridge">
+        <div class="hero-product" id="featuredProduct" role="button" tabindex="0" aria-label="Show Homemade Fudge name" aria-expanded="false"><img id="heroProductImage" src="assets/fudge-box-logo-v12.png" alt="Homemade Fudge"></div>
+        <button class="product-action" id="heroViewProduct" data-product="fudge" aria-label="View Homemade Fudge"><span id="heroProductName">Homemade Fudge</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></button>
+        <h1 id="hero-title"><svg viewBox="0 0 1200 230" role="presentation" aria-hidden="true"><path id="holiday-title-top-arc" d="M 205 92 Q 600 18 995 92" fill="none"/><path id="holiday-title-bottom-arc" d="M 120 188 Q 600 102 1080 188" fill="none"/><text class="holiday-title-top"><textPath href="#holiday-title-top-arc" startOffset="50%" text-anchor="middle">Our Home Made</textPath></text><text class="holiday-title-bottom"><textPath href="#holiday-title-bottom-arc" startOffset="50%" text-anchor="middle">Christmas Collection</textPath></text></svg><span class="sr-only">Our Home Made Christmas Collection</span></h1>
+      </div>
+      <div class="hero-controls" aria-label="Candy carousel controls"><button id="prevSlide" aria-label="Previous candy"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14.5 6-6 6 6 6M9 12h9"/></svg></button><button id="nextSlide" aria-label="Next candy"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9.5 6 6 6-6 6m5.5-6H6"/></svg></button></div>
+      <div class="sr-only" id="slideStatus" aria-live="polite"></div>
+    </section>
+  </header>
+
+  <main id="main">
+    <section class="counter" id="shop">
+      <div class="counter-head"><h2>The candy counter</h2><p>Homemade in Woodsville, with the familiar sweets and playful seasonal pieces of an old-fashioned neighborhood candy shop.</p><button data-view-shop>View everything <svg class="direction-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></button></div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+    <section class="story" id="story">
+      <div class="story-copy"><h2>Homemade in<br>Woodsville.</h2><p>Rooted on Lost River Street, this is candy with a real hometown: familiar flavors, playful moose, and the kind of New Hampshire welcome people remember.</p><p class="story-address">121 Lost River Street · Woodsville, NH 03785</p><a href="#visit">Find the shop <svg class="direction-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div>
+      <figure class="story-object"><img class="woodsville-aerial" src="assets/woodsville-aerial-v10.jpg" alt="Aerial view of Woodsville, New Hampshire, beside the Connecticut River"><figcaption><strong>Woodsville, New Hampshire</strong><span>Our river-valley hometown</span></figcaption></figure>
+    </section>
+    <section class="builder" id="build">
+      <div class="builder-head"><h2>Build a candy box.</h2><p>Choose a demo size and add favorites. No payment is collected.</p></div>
+      <div class="builder-layout"><div class="builder-options"><fieldset><legend>Box size</legend><div class="size-options" id="sizeOptions"></div></fieldset><fieldset><legend>Add favorites</legend><div class="candy-options" id="candyOptions"></div></fieldset></div><div class="box-preview-wrap"><div class="box-topline"><span>Your assortment</span><strong id="boxCount">0 / 6</strong></div><div class="candy-box" id="candyBox" aria-live="polite"></div><button class="primary" id="addBox">Add to bag</button></div></div>
+    </section>
+    <section class="reviews" id="reviews" aria-labelledby="reviews-title">
+      <div class="reviews-intro">
+        <span class="reviews-kicker">From the candy counter</span>
+        <h2 id="reviews-title">Sweet words,<br>passed along.</h2>
+        <p class="reviews-score"><strong>100% recommend</strong><span>15 Facebook reviews</span></p>
+        <a class="reviews-link" href="https://www.facebook.com/cmaker33/reviews" target="_blank" rel="noreferrer">Read every review on Facebook <svg class="direction-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+      </div>
+      <div class="review-notes">
+        <article class="review-note review-note-featured">
+          <span class="review-mark" aria-hidden="true">“</span>
+          <blockquote cite="https://www.facebook.com/cmaker33/reviews">You will never find a better, smoother and creamier fudge. They made a maple and chocolate combo this year that was outstanding!</blockquote>
+          <footer><strong>Deanna Edwards</strong><span>Recommends · October 2017</span></footer>
+        </article>
+        <article class="review-note">
+          <span class="review-mark" aria-hidden="true">“</span>
+          <blockquote cite="https://www.facebook.com/cmaker33/reviews">Best fudge I have ever had! Very creamy and smooth and so many varieties to choose from.</blockquote>
+          <footer><strong>Bonnie Boyce</strong><span>Recommends · August 2017</span></footer>
+        </article>
+        <article class="review-note">
+          <span class="review-mark" aria-hidden="true">“</span>
+          <blockquote cite="https://www.facebook.com/cmaker33/reviews">Best fudge ever! We look forward to getting it every year at the Big E.</blockquote>
+          <footer><strong>Debbie Washington</strong><span>Recommends · November 2018</span></footer>
+        </article>
+      </div>
+    </section>
+    <section class="visit" id="visit"><div><h2>Come find<br>something sweet.</h2><p class="visit-lede">A hometown candy stop in Woodsville, New Hampshire.</p><address><span>121 Lost River Street</span><span>Woodsville, NH 03785</span><a href="tel:+16035205928">603-520-5928</a></address><a class="primary" href="https://www.google.com/maps/search/?api=1&query=121+Lost+River+Street+Woodsville+NH+03785" target="_blank" rel="noreferrer">Get directions <svg class="direction-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div><div class="visit-logo"><span class="visit-place">Woodsville · New Hampshire · 03785</span><div class="mascot-stage"><img class="waving-moose-static" src="assets/moose-static-base-v12.png" alt="Mount Moosilauke’s moose mascot waving"><img class="waving-moose-arm" src="assets/waving-moose-hoof-fixed-v13.png" alt="" aria-hidden="true"></div></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-brand"><img src="assets/logo.png" alt=""><p>Homemade sweets and Woodsville spirit, from our corner of New Hampshire.</p></div><div><h2>Explore</h2><a href="#shop">Candy counter</a><a href="#reviews">Customer reviews</a><a href="#build">Build a box</a><a href="#story">Our Woodsville story</a></div><div><h2>Visit</h2><address>121 Lost River Street<br>Woodsville, NH 03785</address><a href="tel:+16035205928">603-520-5928</a></div><div class="footer-bottom"><span>© <span id="year"></span> Mount Moosilauke Candies</span><span class="footer-links"><a href="https://commons.wikimedia.org/wiki/File:Woodsville,_NH,_Aerial_View,_looking_north.jpg" target="_blank" rel="noreferrer">Woodsville photo credit</a><a href="https://www.facebook.com/cmaker33/reviews" target="_blank" rel="noreferrer">Facebook review source</a><a href="#home">Back to the mountain ↑</a></span></div></footer>
+  <dialog id="searchDialog" class="search-dialog" aria-labelledby="searchTitle"><div class="dialog-bar"><h2 id="searchTitle">Find a favorite</h2><button data-close-search aria-label="Close search">×</button></div><label class="search-field"><span class="sr-only">Search candies</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.3"/><path d="m15.5 15.5 4 4"/></svg><input id="candySearch" type="search" placeholder="Search fudge, lollipops, chocolate…" autocomplete="off"></label><div class="search-results" id="searchResults" aria-live="polite"></div></dialog>
+  <dialog id="shopDialog" class="shop-dialog" aria-labelledby="shopTitle"><div class="dialog-bar"><h2 id="shopTitle">The candy counter</h2><button data-close-dialog aria-label="Close shop">×</button></div><div class="filter-row" id="filters"></div><div class="shop-grid" id="shopGrid"></div></dialog>
+  <dialog id="productDialog" class="product-dialog" aria-labelledby="productTitle"><button class="product-close" data-close-product aria-label="Close product">×</button><div class="product-detail"><div><img id="productImage" src="assets/fudge-box-logo-v12.png" alt=""></div><section><span class="product-sample">Sample product details</span><h2 id="productTitle"></h2><p id="productDescription"></p><dl class="product-facts"><div><dt>Style</dt><dd id="productStyle">Homemade confection</dd></div><div><dt>Presentation</dt><dd id="productPresentation">Seasonal presentation</dd></div><div><dt>Ingredients</dt><dd>To be confirmed by the shop</dd></div></dl><div class="quantity"><button id="qtyMinus" aria-label="Decrease quantity">−</button><output id="qty">1</output><button id="qtyPlus" aria-label="Increase quantity">+</button></div><button class="primary" id="addProduct">Add to demo bag</button><small>Sample layout only. Availability, ingredients, and pricing require confirmation.</small></section></div></dialog>
+  <dialog id="cartDialog" class="cart-drawer" aria-labelledby="cartTitle"><div class="dialog-bar"><h2 id="cartTitle">Your candy bag</h2><button data-close-cart aria-label="Close bag">×</button></div><div class="cart-items" id="cartItems"></div><div class="cart-bottom"><p>No payment or order will be placed.</p><button class="primary" id="demoCheckout">Request ordering details</button></div></dialog>
+</body>
+</html>
