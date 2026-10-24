@@ -856,6 +856,14 @@
   let portfolioIndex = Number.isInteger(requestedProject) && requestedProject >= 0 && requestedProject < portfolioCards.length ? requestedProject : 0;
   let wheelLocked = false;
   let pointerStart = null;
+  const portfolioCaptureVersion = '20261024-complete-2';
+  const portfolioCaptureHeights = {
+    'johnny-g': 5333,
+    'barnes-tree': 7557,
+    'moosilauke-candies': 5053,
+    'boudreault-septic': 6070,
+    'jez-capital': 3449
+  };
   const loadPortfolioCapture = (card) => {
     const capture = card.querySelector('.portfolio-capture');
     if (!capture || capture.dataset.loaded === 'true') return;
@@ -866,12 +874,13 @@
     for (let index = 1; index <= tileCount; index += 1) {
       const image = new Image();
       image.className = 'capture-tile';
-      image.src = `portfolio-captures/${slug}/${String(index).padStart(2, '0')}.webp`;
+      image.src = `portfolio-captures/${slug}/${String(index).padStart(2, '0')}.webp?v=${portfolioCaptureVersion}`;
       image.alt = '';
       image.decoding = 'async';
-      image.loading = index === 1 ? 'eager' : 'lazy';
+      image.loading = 'eager';
+      if (index <= 2) image.fetchPriority = 'high';
       image.width = 1000;
-      image.height = 760;
+      image.height = Math.min(760, Math.max(1, (portfolioCaptureHeights[slug] || tileCount * 760) - (index - 1) * 760));
       fragment.append(image);
     }
     capture.append(fragment);
