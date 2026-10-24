@@ -439,3 +439,40 @@ html{scroll-behavior:smooth}.counter,.story,.builder,.visit{scroll-margin-top:1r
   #hero-title .holiday-title-top{font-size:78px;stroke-width:2.8px}
   #hero-title .holiday-title-bottom{font-size:88px;stroke-width:3.4px}
 }
+
+/* Layered snowfall: varied depth and crystalline shapes instead of dotted rows. */
+.snowfall i{
+  top:-8%;
+  background:rgba(245,250,253,.96);
+  box-shadow:0 0 calc(var(--size)*1.55) rgba(219,239,250,.68);
+  opacity:var(--flake-opacity);
+  filter:blur(var(--flake-blur));
+}
+.snowfall i.snow-crystal{
+  border-radius:0;
+  background:
+    linear-gradient(90deg,transparent 43%,rgba(255,255,255,.96) 44% 56%,transparent 57%),
+    linear-gradient(transparent 43%,rgba(255,255,255,.96) 44% 56%,transparent 57%);
+  filter:blur(0) drop-shadow(0 0 4px rgba(225,242,252,.72));
+}
+.snowfall i.snow-crystal:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:inherit;
+  transform:rotate(45deg);
+}
+.snowfall i.snow-streak{
+  width:max(1px,calc(var(--size)*.2));
+  height:calc(var(--size)*1.8);
+  border-radius:99px;
+  background:linear-gradient(to bottom,rgba(255,255,255,.12),rgba(245,250,253,.94));
+  box-shadow:0 0 6px rgba(219,239,250,.58);
+}
+@keyframes snowfall{
+  from{transform:translate3d(0,-4vh,0) rotate(var(--angle))}
+  to{transform:translate3d(var(--drift),116vh,0) rotate(calc(var(--angle) + 180deg))}
+}
+@media(prefers-reduced-motion:reduce){
+  .snowfall i{top:var(--y);transform:rotate(var(--angle))}
+}

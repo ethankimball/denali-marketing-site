@@ -18,10 +18,20 @@ let heroTimer=0,heroFadeToken=0,heroProductHovered=false;
 heroProducts.forEach(product=>{const preload=new Image();preload.src=product.image;});
 
 const snowfield=$('#snowfall');
-for(let i=0;i<112;i+=1){
+for(let i=0;i<72;i+=1){
   const flake=document.createElement('i');
-  const x=(i*37+11)%100,size=2+(i*7)%11,duration=8+(i*5)%10,drift=-34+(i*13)%69;
-  flake.style.cssText=`--x:${x}%;--size:${size}px;--duration:${duration}s;--delay:${-(i*1.37)%duration}s;--drift:${drift}px`;
+  const x=(i*37+11)%100;
+  const y=4+(i*53+Math.floor(i/6)*17+7)%88;
+  const crystal=i%3===0;
+  const size=crystal?7+(i*7)%8:3+(i*7)%10;
+  const duration=10+(i*5)%12;
+  const drift=-42+(i*13)%85;
+  const opacity=(.38+((i*17)%48)/100).toFixed(2);
+  const blur=((i*11)%5===0?1.4:(i*7)%4===0?.65:0).toFixed(2);
+  const angle=-28+(i*19)%57;
+  if(crystal)flake.className='snow-crystal';
+  else if(i%7===0)flake.className='snow-streak';
+  flake.style.cssText=`--x:${x}%;--y:${y}%;--size:${size}px;--duration:${duration}s;--delay:${-(i*1.37)%duration}s;--drift:${drift}px;--flake-opacity:${opacity};--flake-blur:${blur}px;--angle:${angle}deg`;
   snowfield.append(flake);
 }
 
