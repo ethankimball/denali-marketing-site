@@ -1,0 +1,27 @@
+{
+  "johnny-g": {
+    "tiles": 8,
+    "width": 1000,
+    "height": 5333
+  },
+  "barnes-tree": {
+    "tiles": 10,
+    "width": 1000,
+    "height": 7557
+  },
+  "moosilauke-candies": {
+    "tiles": 7,
+    "width": 1000,
+    "height": 5053
+  },
+  "boudreault-septic": {
+    "tiles": 8,
+    "width": 1000,
+    "height": 6070
+  },
+  "jez-capital": {
+    "tiles": 5,
+    "width": 1000,
+    "height": 3449
+  }
+}

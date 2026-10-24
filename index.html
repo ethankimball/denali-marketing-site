@@ -122,8 +122,8 @@
 @media(prefers-reduced-motion:reduce){.portfolio-card[data-active="true"] .portfolio-browser{animation:none}}
 
 /* Real portfolio pages live inside the monitor as scroll-only, same-origin previews. */
-.portfolio-preview-scroll{position:relative;background:#fff;color:#111}.site-preview-frame{display:block;width:100%;min-height:1100px;border:0;background:#fff;pointer-events:none}.portfolio-card:not([data-active="true"]) .site-preview-frame{visibility:hidden}.portfolio-card[data-active="true"] .portfolio-preview-scroll{cursor:ns-resize}.portfolio-card[data-active="true"] .portfolio-preview-scroll:after{content:'SCROLL TO EXPLORE';position:sticky;z-index:8;display:block;left:100%;bottom:10px;width:max-content;margin:-30px 10px 8px auto;padding:6px 9px;background:rgba(13,12,48,.82);color:#fff;font:700 8px/1 Manrope,Arial,sans-serif;letter-spacing:.12em;pointer-events:none;backdrop-filter:blur(6px)}
-@media(max-width:600px){.portfolio-card[data-active="true"] .portfolio-preview-scroll:after{font-size:7px;bottom:7px;margin-right:7px}}
+.portfolio-preview-scroll{position:relative;background:#fff;color:#111}.portfolio-capture{min-height:100%;font-size:0}.capture-tile{display:block;width:100%;height:auto}.portfolio-card:not([data-active="true"]) .portfolio-capture{visibility:hidden;opacity:0}.blueprint-preview{position:absolute;z-index:4;inset:49px 12px 12px;width:calc(100% - 24px);height:calc(100% - 61px);display:none;object-fit:cover;object-position:top;background:#0a073a;mix-blend-mode:screen;filter:drop-shadow(0 0 5px rgba(229,232,245,.38));opacity:.88;pointer-events:none}.portfolio-card:not([data-active="true"]) .blueprint-preview{display:block}.portfolio-card[data-active="true"] .portfolio-preview-scroll{cursor:ns-resize}.portfolio-card[data-active="true"] .portfolio-preview-scroll:after{content:'SCROLL TO EXPLORE';position:sticky;z-index:8;display:block;left:100%;bottom:10px;width:max-content;margin:-30px 10px 8px auto;padding:6px 9px;background:rgba(13,12,48,.82);color:#fff;font:700 8px/1 Manrope,Arial,sans-serif;letter-spacing:.12em;pointer-events:none;backdrop-filter:blur(6px)}
+@media(max-width:600px){.blueprint-preview{inset:36px 9px 10px;width:calc(100% - 18px);height:calc(100% - 46px)}.portfolio-card[data-active="true"] .portfolio-preview-scroll:after{font-size:7px;bottom:7px;margin-right:7px}}
 
 /* October content system: premium monthly positioning in the established blueprint world. */
 .nav-links{gap:22px;font-size:11px}.copy h1{font-size:clamp(50px,4.9vw,76px)}.copy h1 .proof-line{font-size:.72em;line-height:1.1}.copy p.hero-proof{max-width:520px;margin:21px 0 0;color:rgba(229,232,245,.72);font-size:10px;line-height:1.5;letter-spacing:.025em}.portfolio-action,.section-action{position:relative;z-index:2;display:flex;width:max-content;align-items:center;gap:13px;margin:24px auto 0;padding:9px 2px;color:var(--white);font-size:12px;font-weight:700}.portfolio-action:after,.section-action:after{content:'';position:absolute;inset:-8px -16px;border:1px solid rgba(253,253,255,.72);border-radius:48% 54% 45% 53%;transform:rotate(-2deg);pointer-events:none}.portfolio-action .cta-arrow,.section-action .cta-arrow{width:28px}.portfolio-action:hover,.section-action:hover{transform:translateY(-2px)}
@@ -370,23 +370,23 @@
 
 <article class="portfolio-card" data-project="0" data-active="true" aria-label="Johnny G's Barbershop, selected">
 <div class="portfolio-browser"><div class="browser-bar" aria-hidden="true"><i class="browser-mark"></i><i class="browser-mark"></i><i class="browser-mark"></i><span class="browser-address">johnnygsbarbershop.com</span></div>
-<div class="mini-scroll portfolio-preview-scroll" tabindex="0"><iframe class="site-preview-frame" title="Johnny G's Barbershop homepage preview" data-src="portfolio-sites/johnny-g/index.html" sandbox="allow-scripts allow-same-origin" tabindex="-1"></iframe></div><svg class="blueprint-wire" viewBox="0 0 700 430" aria-hidden="true"><rect class="bp-strong" x="20" y="18" width="660" height="394" rx="4"/><path class="bp-guide" d="M20 62h660M242 62v350M20 250h660"/><path class="bp-strong" d="M48 97h138M48 121h112M48 145h125M48 190h96M48 205h126"/><rect class="bp-detail" x="278" y="92" width="354" height="128"/><path class="bp-detail" d="m278 220 86-76 67 49 71-70 130 97M48 286h168v92H48zM266 286h168v92H266zM484 286h148v92H484z"/><path class="bp-guide" d="M62 306h91M62 326h126M280 306h96M280 326h132M498 306h84M498 326h112"/></svg></div><footer class="portfolio-meta"><span><strong>Johnny G's Barbershop</strong><br>Barbershop website</span><span>scroll-only preview</span></footer></article>
+<div class="mini-scroll portfolio-preview-scroll portfolio-capture" data-capture="johnny-g" data-tiles="8" tabindex="0" aria-label="Scrollable screenshot of Johnny G's Barbershop website"></div><img class="blueprint-preview" src="portfolio-captures/johnny-g/blueprint.webp" alt="" aria-hidden="true"></div><footer class="portfolio-meta"><span><strong>Johnny G's Barbershop</strong><br>Barbershop website</span><span>scroll-only preview</span></footer></article>
 
 <article class="portfolio-card" data-project="1" data-active="false" aria-label="Barnes Tree and Landscape">
 <div class="portfolio-browser"><div class="browser-bar" aria-hidden="true"><i class="browser-mark"></i><i class="browser-mark"></i><i class="browser-mark"></i><span class="browser-address">barnestreeandlandscape.com</span></div>
-<div class="mini-scroll portfolio-preview-scroll" tabindex="-1"><iframe class="site-preview-frame" title="Barnes Tree and Landscape homepage preview" data-src="portfolio-sites/barnes-tree/index.html" sandbox="allow-scripts allow-same-origin" tabindex="-1"></iframe></div><svg class="blueprint-wire" viewBox="0 0 700 430" aria-hidden="true"><rect class="bp-strong" x="20" y="18" width="660" height="394" rx="4"/><path class="bp-guide" d="M20 62h660M242 62v350M20 250h660"/><path class="bp-strong" d="M48 97h138M48 121h112M48 145h125M48 190h96M48 205h126"/><rect class="bp-detail" x="278" y="92" width="354" height="128"/><path class="bp-detail" d="m278 220 86-76 67 49 71-70 130 97M48 286h168v92H48zM266 286h168v92H266zM484 286h148v92H484z"/><path class="bp-guide" d="M62 306h91M62 326h126M280 306h96M280 326h132M498 306h84M498 326h112"/></svg></div><footer class="portfolio-meta"><span><strong>Barnes Tree &amp; Landscape</strong><br>Tree service website</span><span>scroll-only preview</span></footer></article>
+<div class="mini-scroll portfolio-preview-scroll portfolio-capture" data-capture="barnes-tree" data-tiles="10" tabindex="-1" aria-label="Scrollable screenshot of Barnes Tree and Landscape website"></div><img class="blueprint-preview" src="portfolio-captures/barnes-tree/blueprint.webp" alt="" aria-hidden="true"></div><footer class="portfolio-meta"><span><strong>Barnes Tree &amp; Landscape</strong><br>Tree service website</span><span>scroll-only preview</span></footer></article>
 
 <article class="portfolio-card" data-project="2" data-active="false" aria-label="Mount Moosilauke Candies">
 <div class="portfolio-browser"><div class="browser-bar" aria-hidden="true"><i class="browser-mark"></i><i class="browser-mark"></i><i class="browser-mark"></i><span class="browser-address">mountmoosilaukecandies.com</span></div>
-<div class="mini-scroll portfolio-preview-scroll" tabindex="-1"><iframe class="site-preview-frame" title="Mount Moosilauke Candies homepage preview" data-src="portfolio-sites/moosilauke-candies/index.html" sandbox="allow-scripts allow-same-origin" tabindex="-1"></iframe></div><svg class="blueprint-wire" viewBox="0 0 700 430" aria-hidden="true"><rect class="bp-strong" x="20" y="18" width="660" height="394" rx="4"/><path class="bp-guide" d="M20 62h660M242 62v350M20 250h660"/><path class="bp-strong" d="M48 97h138M48 121h112M48 145h125M48 190h96M48 205h126"/><rect class="bp-detail" x="278" y="92" width="354" height="128"/><path class="bp-detail" d="m278 220 86-76 67 49 71-70 130 97M48 286h168v92H48zM266 286h168v92H266zM484 286h148v92H484z"/><path class="bp-guide" d="M62 306h91M62 326h126M280 306h96M280 326h132M498 306h84M498 326h112"/></svg></div><footer class="portfolio-meta"><span><strong>Mount Moosilauke Candies</strong><br>Candy shop website</span><span>scroll-only preview</span></footer></article>
+<div class="mini-scroll portfolio-preview-scroll portfolio-capture" data-capture="moosilauke-candies" data-tiles="7" tabindex="-1" aria-label="Scrollable screenshot of Mount Moosilauke Candies website"></div><img class="blueprint-preview" src="portfolio-captures/moosilauke-candies/blueprint.webp" alt="" aria-hidden="true"></div><footer class="portfolio-meta"><span><strong>Mount Moosilauke Candies</strong><br>Candy shop website</span><span>scroll-only preview</span></footer></article>
 
 <article class="portfolio-card" data-project="3" data-active="false" aria-label="Boudreault Septic">
 <div class="portfolio-browser"><div class="browser-bar" aria-hidden="true"><i class="browser-mark"></i><i class="browser-mark"></i><i class="browser-mark"></i><span class="browser-address">boudreaultseptic.com</span></div>
-<div class="mini-scroll portfolio-preview-scroll" tabindex="-1"><iframe class="site-preview-frame" title="Boudreault Septic homepage preview" data-src="portfolio-sites/boudreault-septic/index.html" sandbox="allow-scripts allow-same-origin" tabindex="-1"></iframe></div><svg class="blueprint-wire" viewBox="0 0 700 430" aria-hidden="true"><rect class="bp-strong" x="20" y="18" width="660" height="394" rx="4"/><path class="bp-guide" d="M20 62h660M242 62v350M20 250h660"/><path class="bp-strong" d="M48 97h138M48 121h112M48 145h125M48 190h96M48 205h126"/><rect class="bp-detail" x="278" y="92" width="354" height="128"/><path class="bp-detail" d="m278 220 86-76 67 49 71-70 130 97M48 286h168v92H48zM266 286h168v92H266zM484 286h148v92H484z"/><path class="bp-guide" d="M62 306h91M62 326h126M280 306h96M280 326h132M498 306h84M498 326h112"/></svg></div><footer class="portfolio-meta"><span><strong>Boudreault Septic</strong><br>Septic service website</span><span>scroll-only preview</span></footer></article>
+<div class="mini-scroll portfolio-preview-scroll portfolio-capture" data-capture="boudreault-septic" data-tiles="8" tabindex="-1" aria-label="Scrollable screenshot of Boudreault Septic website"></div><img class="blueprint-preview" src="portfolio-captures/boudreault-septic/blueprint.webp" alt="" aria-hidden="true"></div><footer class="portfolio-meta"><span><strong>Boudreault Septic</strong><br>Septic service website</span><span>scroll-only preview</span></footer></article>
 
 <article class="portfolio-card" data-project="4" data-active="false" aria-label="JEZ Capital">
 <div class="portfolio-browser"><div class="browser-bar" aria-hidden="true"><i class="browser-mark"></i><i class="browser-mark"></i><i class="browser-mark"></i><span class="browser-address">jezcapital.com</span></div>
-<div class="mini-scroll portfolio-preview-scroll" tabindex="-1"><iframe class="site-preview-frame" title="JEZ Capital homepage preview" data-src="portfolio-sites/jez-capital/JEZ-Capital-Demo.html" sandbox="allow-scripts allow-same-origin" tabindex="-1"></iframe></div><svg class="blueprint-wire" viewBox="0 0 700 430" aria-hidden="true"><rect class="bp-strong" x="20" y="18" width="660" height="394" rx="4"/><path class="bp-guide" d="M20 62h660M242 62v350M20 250h660"/><path class="bp-strong" d="M48 97h138M48 121h112M48 145h125M48 190h96M48 205h126"/><rect class="bp-detail" x="278" y="92" width="354" height="128"/><path class="bp-detail" d="m278 220 86-76 67 49 71-70 130 97M48 286h168v92H48zM266 286h168v92H266zM484 286h148v92H484z"/><path class="bp-guide" d="M62 306h91M62 326h126M280 306h96M280 326h132M498 306h84M498 326h112"/></svg></div><footer class="portfolio-meta"><span><strong>JEZ Capital</strong><br>Financial services website</span><span>scroll-only preview</span></footer></article>
+<div class="mini-scroll portfolio-preview-scroll portfolio-capture" data-capture="jez-capital" data-tiles="5" tabindex="-1" aria-label="Scrollable screenshot of JEZ Capital website"></div><img class="blueprint-preview" src="portfolio-captures/jez-capital/blueprint.webp" alt="" aria-hidden="true"></div><footer class="portfolio-meta"><span><strong>JEZ Capital</strong><br>Financial services website</span><span>scroll-only preview</span></footer></article>
 </div>
 <div class="portfolio-controls"><button class="portfolio-control portfolio-prev" type="button" aria-label="Previous sample site">←</button><span class="portfolio-count" aria-live="polite">01 / 05</span><button class="portfolio-control portfolio-next" type="button" aria-label="Next sample site">→</button></div>
 <p class="portfolio-note">Scroll each homepage to explore the design. Links and forms are intentionally disabled.</p>
@@ -856,27 +856,33 @@
   let portfolioIndex = Number.isInteger(requestedProject) && requestedProject >= 0 && requestedProject < portfolioCards.length ? requestedProject : 0;
   let wheelLocked = false;
   let pointerStart = null;
-  const loadPortfolioFrame = (card) => {
-    const frame = card.querySelector('.site-preview-frame');
-    if (!frame || frame.dataset.loaded === 'true') return;
-    frame.dataset.loaded = 'true';
-    frame.addEventListener('load', () => {
-      const fitFrame = () => {
-        try {
-          const doc = frame.contentDocument;
-          if (!doc) return;
-          doc.documentElement.style.pointerEvents = 'none';
-          doc.body?.style.setProperty('pointer-events', 'none');
-          const height = Math.max(doc.documentElement.scrollHeight, doc.body?.scrollHeight || 0, 1100);
-          frame.style.height = `${height}px`;
-        } catch {}
-      };
-      fitFrame();
-      setTimeout(fitFrame, 600);
-      setTimeout(fitFrame, 1800);
-      try { new ResizeObserver(fitFrame).observe(frame.contentDocument.documentElement); } catch {}
-    }, { once: true });
-    frame.src = frame.dataset.src;
+  const loadPortfolioCapture = (card) => {
+    const capture = card.querySelector('.portfolio-capture');
+    if (!capture || capture.dataset.loaded === 'true') return;
+    const slug = capture.dataset.capture;
+    const tileCount = Number(capture.dataset.tiles);
+    if (!slug || !tileCount) return;
+    const fragment = document.createDocumentFragment();
+    for (let index = 1; index <= tileCount; index += 1) {
+      const image = new Image();
+      image.className = 'capture-tile';
+      image.src = `portfolio-captures/${slug}/${String(index).padStart(2, '0')}.webp`;
+      image.alt = '';
+      image.decoding = 'async';
+      image.loading = index === 1 ? 'eager' : 'lazy';
+      image.width = 1000;
+      image.height = 760;
+      fragment.append(image);
+    }
+    capture.append(fragment);
+    capture.dataset.loaded = 'true';
+  };
+  const unloadPortfolioCapture = (card) => {
+    const capture = card.querySelector('.portfolio-capture');
+    if (!capture || capture.dataset.loaded !== 'true') return;
+    capture.replaceChildren();
+    capture.dataset.loaded = 'false';
+    capture.scrollTop = 0;
   };
   const positionPortfolio = () => {
     const mobile = innerWidth < 700;
@@ -894,7 +900,8 @@
       if (relative < -2) relative += portfolioCards.length;
       const slot = slots[String(relative)];
       const active = relative === 0;
-      if (active) loadPortfolioFrame(card);
+      if (active) loadPortfolioCapture(card);
+      else unloadPortfolioCapture(card);
       card.style.setProperty('--orbit-x', `${slot.x}px`);
       card.style.setProperty('--orbit-y', `${slot.y}px`);
       card.style.setProperty('--orbit-r', `${slot.r}deg`);
