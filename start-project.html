@@ -109,12 +109,13 @@
         form.reset();
         return;
       }
+      formData.delete('website');
       const controller = new AbortController();
       const timeout = window.setTimeout(() => controller.abort(), 15000);
       const response = await fetch(form.action, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify(Object.fromEntries(formData)),
+        headers: { Accept: 'application/json' },
+        body: formData,
         signal: controller.signal
       });
       window.clearTimeout(timeout);
