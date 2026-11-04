@@ -28,7 +28,7 @@
 .layout{display:grid;grid-template-columns:minmax(280px,.72fr) minmax(0,1.28fr);gap:7vw;padding:clamp(70px,9vw,135px) 7% 120px}.intro{position:sticky;top:45px;align-self:start}.intro h1{margin:0;font-size:clamp(58px,7.5vw,116px);font-weight:500;letter-spacing:-.065em;line-height:.95}.intro p{max-width:390px;margin-top:30px;color:var(--ice);font-size:15px;line-height:1.75}.pencil{margin-top:38px;font:26px Caveat,cursive;color:var(--ice);transform:rotate(-3deg)}
 .request-form{min-width:0}.form-section{padding:0 0 58px;margin-bottom:62px;border-bottom:1px solid var(--line)}.form-section:last-of-type{margin-bottom:38px}.form-section h2{margin:0 0 35px;font-size:clamp(34px,3.5vw,52px);font-weight:500;letter-spacing:-.045em}.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px 24px}.field{display:grid;gap:10px}.field.full{grid-column:1/-1}.field label{font-size:12px;font-weight:700}.optional{color:var(--ice);font-weight:400}.field input,.field textarea,.field select{width:100%;border:0;border-bottom:1px solid rgba(229,232,245,.62);border-radius:0;padding:13px 2px;background:transparent;color:var(--white)}.field textarea{min-height:120px;resize:vertical;line-height:1.6}.field select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--ice) 50%),linear-gradient(135deg,var(--ice) 50%,transparent 50%);background-position:calc(100% - 12px) 53%,calc(100% - 7px) 53%;background-size:5px 5px,5px 5px;background-repeat:no-repeat}.field select option{color:#181824}.field input::placeholder,.field textarea::placeholder{color:rgba(229,232,245,.55)}
 .check-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.check{display:flex;align-items:flex-start;gap:10px;color:var(--ice);font-size:13px;line-height:1.45}.check input{appearance:none;width:17px;height:17px;flex:0 0 auto;margin:2px 0 0;border:1px solid var(--ice);background:transparent}.check input:checked{background:var(--ice);box-shadow:inset 0 0 0 4px var(--indigo)}
-.submit{position:relative;display:inline-flex;align-items:center;gap:14px;border:0;background:transparent;padding:11px 4px;color:var(--white);font-size:13px;font-weight:700;cursor:pointer}.submit:after{content:'';position:absolute;inset:-7px -16px;border:1.3px solid rgba(253,253,255,.8);border-radius:48% 54% 46% 52% / 53% 47% 56% 44%;transform:rotate(-2deg)}.submit svg{width:30px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.submit:disabled{cursor:wait;opacity:.55}.status{margin-top:34px;padding:25px 0;border-top:1px solid var(--line)}.status[hidden]{display:none}.status h2{margin:0 0 12px;font-size:28px;font-weight:550}.status p{max-width:580px;color:var(--ice);font-size:13px;line-height:1.65}.status.error{border-top-color:rgba(255,190,190,.65)}.status.error h2{color:#ffd7d7}.form-trap{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;white-space:nowrap!important}.copy-request{margin-top:18px;border:1px solid var(--line);background:transparent;color:var(--white);padding:10px 14px;cursor:pointer}.site-footer{display:flex;justify-content:space-between;gap:30px;margin:0 5%;padding:38px 0 48px;border-top:1px solid var(--line);color:var(--ice);font-size:11px}
+.submit{position:relative;display:inline-flex;align-items:center;gap:14px;border:0;background:transparent;padding:11px 4px;color:var(--white);font-size:13px;font-weight:700;cursor:pointer}.submit:after{content:'';position:absolute;inset:-7px -16px;border:1.3px solid rgba(253,253,255,.8);border-radius:48% 54% 46% 52% / 53% 47% 56% 44%;transform:rotate(-2deg)}.submit svg{width:30px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.submit:disabled{cursor:wait;opacity:.55}.status{margin-top:34px;padding:25px 0;border-top:1px solid var(--line)}.status[hidden]{display:none}.status h2{margin:0 0 12px;font-size:28px;font-weight:550}.status p{max-width:580px;color:var(--ice);font-size:13px;line-height:1.65}.status.error{border-top-color:rgba(255,190,190,.65)}.status.error h2{color:#ffd7d7}.fallback-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}.fallback-actions[hidden]{display:none}.fallback-actions a{border:1px solid var(--line);padding:10px 14px;font-size:12px;font-weight:700}.fallback-actions a:hover{background:rgba(229,232,245,.08)}.form-trap{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;white-space:nowrap!important}.copy-request{margin-top:18px;border:1px solid var(--line);background:transparent;color:var(--white);padding:10px 14px;cursor:pointer}.site-footer{display:flex;justify-content:space-between;gap:30px;margin:0 5%;padding:38px 0 48px;border-top:1px solid var(--line);color:var(--ice);font-size:11px}
 @media(max-width:800px){.shell{width:100%;margin:0;border-radius:0}.layout{grid-template-columns:1fr;gap:58px;padding:72px 7% 90px}.intro{position:static}.intro h1{font-size:clamp(56px,15vw,90px)}.field-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.check-row{grid-template-columns:1fr}.nav{margin-inline:7%}.brand{font-size:18px}.site-footer{margin-inline:7%;flex-direction:column}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
@@ -38,8 +38,11 @@
 <header class="nav"><a class="brand" href="/" aria-label="Denali Marketing home"><strong>Denali</strong><span>Marketing</span></a><a class="back" href="/">Back to the site</a></header>
 <div class="layout">
 <section class="intro" aria-labelledby="request-title"><h1 id="request-title">Tell us<br>what you’ve got.</h1><p>A few details about your business, and we’ll take it from there.</p></section>
-<form class="request-form" id="project-request" name="project-request" method="POST" action="/start-project.html" data-netlify="true" netlify-honeypot="website">
-<input type="hidden" name="form-name" value="project-request">
+<form class="request-form" id="project-request" name="project-request" method="POST" action="https://api.web3forms.com/submit">
+<input type="hidden" name="access_key" value="a9b5acdb-276b-4645-8f78-f972940c3818">
+<input type="hidden" name="subject" value="New Denali Marketing project request">
+<input type="hidden" name="from_name" value="Denali Marketing website">
+<input class="form-trap" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
 <section class="form-section" aria-labelledby="contact-heading"><h2 id="contact-heading">You.</h2><div class="field-grid">
 <div class="field"><label for="name">Your Name</label><input id="name" name="name" autocomplete="name" placeholder="What should we call you?" required></div>
 <div class="field"><label for="business">Business Name</label><input id="business" name="business" autocomplete="organization" placeholder="What’s your business called?" required></div>
@@ -58,7 +61,7 @@
 <div class="form-trap" aria-hidden="true"><label for="website">Leave this field empty</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
 <input id="started-at" name="started_at" type="hidden">
 <button class="submit" type="submit"><span class="submit-label">Let’s Make It Happen</span> <svg viewBox="0 0 30 24" aria-hidden="true"><path d="M2 21C7 22 8 16 12 16C16 16 14 11 19 10C22 9 23 7 25 3M19 4l6-1-1 6"/></svg></button>
-<section class="status" id="request-status" aria-live="polite" hidden><h2 id="status-title">Got it. We’ll be in touch soon.</h2><p id="status-copy">Your project request was received.</p></section>
+<section class="status" id="request-status" aria-live="polite" hidden><h2 id="status-title">Got it. We’ll be in touch soon.</h2><p id="status-copy">Your project request was received.</p><div class="fallback-actions" id="fallback-actions" hidden><a id="email-fallback" href="mailto:ethankimball8@gmail.com">Email this request</a><a href="tel:+16038380368">Call 603-838-0368</a></div></section>
 </form>
 </div>
 <footer class="site-footer"><span class="brand"><strong>Denali</strong><span>Marketing</span></span><span>Websites built around your business.</span></footer>
@@ -72,26 +75,51 @@
   const submit = form.querySelector('.submit');
   const submitLabel = form.querySelector('.submit-label');
   const startedAt = form.querySelector('#started-at');
+  const fallbackActions = form.querySelector('#fallback-actions');
+  const emailFallback = form.querySelector('#email-fallback');
   const packageSelect = document.querySelector('#package');
   const requestedPackage = new URLSearchParams(location.search).get('package');
   const packageLabels = { foundation: 'Foundation', presence: 'Presence', signature: 'Signature' };
   if (packageLabels[requestedPackage]) packageSelect.value = packageLabels[requestedPackage];
   startedAt.value = String(Date.now());
+  const createFallbackEmail = (formData) => {
+    const labels = {
+      name: 'Name', business: 'Business', email: 'Email', phone: 'Phone',
+      business_story: 'What the business does', existing_website: 'Existing website',
+      package: 'Package', photography: 'Photography', notes: 'Notes'
+    };
+    const lines = [...formData.entries()]
+      .filter(([key, value]) => labels[key] && String(value).trim())
+      .map(([key, value]) => `${labels[key]}: ${value}`);
+    const subject = `Website request from ${formData.get('name') || 'a new lead'}`;
+    emailFallback.href = `mailto:ethankimball8@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join('\n\n'))}`;
+  };
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
-    if (!form.reportValidity()) return;
+    if (submit.disabled || !form.reportValidity()) return;
     submit.disabled = true;
     submitLabel.textContent = 'Sending…';
     status.hidden = true;
     status.classList.remove('error');
+    fallbackActions.hidden = true;
+    const formData = new FormData(form);
+    createFallbackEmail(formData);
     try {
-      const formData = new FormData(form);
-      const response = await fetch('/', {
+      if (formData.get('website')) {
+        form.reset();
+        return;
+      }
+      const controller = new AbortController();
+      const timeout = window.setTimeout(() => controller.abort(), 15000);
+      const response = await fetch(form.action, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData).toString()
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(Object.fromEntries(formData)),
+        signal: controller.signal
       });
-      if (!response.ok) throw new Error('Delivery failed');
+      window.clearTimeout(timeout);
+      const result = await response.json().catch(() => null);
+      if (!response.ok || result?.success !== true) throw new Error(result?.message || 'Delivery failed');
       statusTitle.textContent = 'Got it. We’ll be in touch soon.';
       statusCopy.textContent = 'Your project request was received.';
       status.hidden = false;
@@ -99,8 +127,9 @@
       startedAt.value = String(Date.now());
     } catch (error) {
       statusTitle.textContent = 'That didn’t send.';
-      statusCopy.textContent = 'Please try again in a moment. Your information is still here.';
+      statusCopy.textContent = 'Your information is still here. Try again, or send the completed request by email.';
       status.classList.add('error');
+      fallbackActions.hidden = false;
       status.hidden = false;
     } finally {
       submit.disabled = false;
