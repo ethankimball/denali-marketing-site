@@ -1,8 +1,8 @@
 {
-  "johnny-g": {
-    "tiles": 8,
+  "taylors-field-forest": {
+    "tiles": 11,
     "width": 1000,
-    "height": 5333
+    "height": 8120
   },
   "barnes-tree": {
     "tiles": 10,
