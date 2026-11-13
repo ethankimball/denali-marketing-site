@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Start a project | Denali Marketing</title>
-<meta name="description" content="Tell Denali Marketing about your business and the website you want to build.">
+<meta name="description" content="Tell Denali Marketing about your business and what you want to build next.">
 <meta name="theme-color" content="#211b84">
 <meta name="robots" content="noindex,follow">
 <link rel="canonical" href="https://denalimarketing.org/start-project.html">
@@ -12,10 +12,10 @@
 <meta property="og:site_name" content="Denali Marketing">
 <meta property="og:url" content="https://denalimarketing.org/start-project.html">
 <meta property="og:title" content="Start a project | Denali Marketing">
-<meta property="og:description" content="Tell Denali Marketing about your business and the website you want to build.">
+<meta property="og:description" content="Tell Denali Marketing about your business and what you want to build next.">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Start a project | Denali Marketing">
-<meta name="twitter:description" content="Tell Denali Marketing about your business and the website you want to build.">
+<meta name="twitter:description" content="Tell Denali Marketing about your business and what you want to build next.">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -54,8 +54,8 @@
 <div class="field full"><label for="business-story">What Does Your Business Do?</label><textarea id="business-story" name="business_story" placeholder="Tell us a little about what you do." required></textarea></div>
 <div class="field"><label for="existing-website">Do You Have an Existing Website?</label><select id="existing-website" name="existing_website"><option>Yes</option><option>No</option></select></div>
 </div></section>
-<section class="form-section" aria-labelledby="website-heading"><h2 id="website-heading">The website.</h2><div class="field-grid">
-<div class="field"><label for="package">Which Package Interests You?</label><select id="package" name="package"><option>Foundation</option><option>Presence</option><option>Signature</option><option>Not sure yet</option></select></div>
+<section class="form-section" aria-labelledby="website-heading"><h2 id="website-heading">What you need.</h2><div class="field-grid">
+<div class="field"><label for="interest">What Do You Want Help With?</label><select id="interest" name="interest"><option>A new or rebuilt website</option><option>SEO + GEO visibility</option><option>Marketing and lead generation</option><option>A mix of these</option><option>Not sure yet</option></select></div>
 <div class="field"><label for="photography">Interested in Professional Photography?</label><select id="photography" name="photography"><option>Yes</option><option>No</option><option>Maybe</option></select></div>
 <div class="field full"><label for="notes">Anything Else We Should Know?</label><textarea id="notes" name="notes" placeholder="Ideas, inspiration, questions, or anything else you’d like to share."></textarea></div>
 </div></section>
@@ -78,16 +78,21 @@
   const startedAt = form.querySelector('#started-at');
   const fallbackActions = form.querySelector('#fallback-actions');
   const emailFallback = form.querySelector('#email-fallback');
-  const packageSelect = document.querySelector('#package');
-  const requestedPackage = new URLSearchParams(location.search).get('package');
-  const packageLabels = { foundation: 'Foundation', presence: 'Presence', signature: 'Signature' };
-  if (packageLabels[requestedPackage]) packageSelect.value = packageLabels[requestedPackage];
+  const interestSelect = document.querySelector('#interest');
+  const params = new URLSearchParams(location.search);
+  const requestedInterest = params.get('interest') || params.get('package');
+  const interestLabels = {
+    website: 'A new or rebuilt website', foundation: 'A new or rebuilt website', presence: 'A new or rebuilt website',
+    visibility: 'SEO + GEO visibility', signature: 'SEO + GEO visibility',
+    growth: 'Marketing and lead generation'
+  };
+  if (interestLabels[requestedInterest]) interestSelect.value = interestLabels[requestedInterest];
   startedAt.value = String(Date.now());
   const createFallbackEmail = (formData) => {
     const labels = {
       name: 'Name', business: 'Business', email: 'Email', phone: 'Phone',
       business_story: 'What the business does', existing_website: 'Existing website',
-      package: 'Package', photography: 'Photography', notes: 'Notes'
+      interest: 'Project goal', photography: 'Photography', notes: 'Notes'
     };
     const lines = [...formData.entries()]
       .filter(([key, value]) => labels[key] && String(value).trim())
