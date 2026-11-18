@@ -14,14 +14,16 @@
     "width": 1000,
     "height": 5053
   },
-  "boudreault-septic": {
-    "tiles": 8,
+  "bunz-n-chix": {
+    "tiles": 7,
     "width": 1000,
-    "height": 6070
+    "height": 5292,
+    "extension": "png"
   },
-  "jez-capital": {
+  "no-more-junk-dallas": {
     "tiles": 5,
     "width": 1000,
-    "height": 3449
+    "height": 3618,
+    "extension": "png"
   }
 }
