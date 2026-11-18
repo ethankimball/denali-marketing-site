@@ -29,6 +29,12 @@
 @media(max-width:520px){.back{font-size:11px}.progress-head{grid-template-columns:auto 1fr;gap:13px}.progress-value{grid-column:1/-1}.stage{padding-top:48px}.stage-copy p{font-size:12.5px}.question-help{font-size:12px}.option-copy{font-size:14px}.result-summary{font-size:12.5px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.step{animation:none}.progress-fill,.option-mark:after{transition:none}}
 </style>
+<style>
+/* Hand-drawn button rings retain clear space around every label. */
+.back{padding:12px 8px;line-height:1.2}.back:after{inset:-8px -18px}
+.previous,.continue{padding:12px 8px;line-height:1.2}.continue:after{inset:-8px -17px}
+.submit{padding:13px 9px;line-height:1.2}.submit:after{inset:-9px -18px}
+</style>
 </head>
 <body>
 <main class="page">

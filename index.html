@@ -392,6 +392,26 @@
 @media(max-width:900px){.faq-head{grid-template-columns:1fr;gap:28px}.faq summary{grid-template-columns:minmax(0,1fr) 30px;gap:24px}.faq-answer{padding-right:54px}}
 @media(max-width:520px){.faq h2{font-size:48px}.faq-intro{font-size:13px}.faq summary{padding:25px 0}.faq-question{font-size:25px}.faq-answer{padding:0 38px 24px 0;font-size:12.5px}}
 @media(prefers-reduced-motion:reduce){.faq-toggle:before,.faq-toggle:after{transition:none}}
+
+/* Button clearance system: every hand-drawn ring stays comfortably outside its label and icon. */
+.cta{padding:12px 10px;line-height:1.2}
+.cta:after,.hero-stage .cta:after{inset:-10px -19px -9px}
+.cta:before{inset:-7px -16px -12px -17px}
+.portfolio-action,.section-action{padding:12px 8px;line-height:1.2}
+.portfolio-action:after,.section-action:after{inset:-10px -19px}
+.package-link{padding:11px 8px;line-height:1.2}
+.package-link:after{inset:-9px -17px}
+.package-link:before{inset:-6px -14px -12px -15px}
+.portfolio-live-link{padding:14px 21px;line-height:1.2}
+@media(max-width:520px){
+  .nav-end{width:118px;right:2px}
+  .nav-end .cta{width:118px;padding:9px 7px;gap:8px;line-height:1.15}
+  .nav-end .cta:after{inset:-7px -8px}
+  .nav-end .cta:before{inset:-4px -6px -8px -7px}
+  .portfolio-action,.section-action{padding:11px 7px}
+  .portfolio-action:after,.section-action:after{inset:-9px -16px}
+  .portfolio-live-link{padding:11px 15px;line-height:1.2}
+}
 </style>
 </head>
 <body>
